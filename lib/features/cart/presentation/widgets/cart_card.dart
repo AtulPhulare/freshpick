@@ -117,7 +117,7 @@ class CartCard extends StatelessWidget {
                         style: const TextStyle(
                           color: AppColors.primary,
                           fontSize: 18,
-                          fontWeight: FontWeight.w900,
+                          fontWeight: FontWeight.w700,
                           letterSpacing: -0.5,
                         ),
                       ),

@@ -61,7 +61,7 @@ class OrderTrackingScreen extends StatelessWidget {
         borderRadius: BorderRadius.circular(24),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.04),
+            color: Colors.black.withValues(alpha:0.04),
             blurRadius: 16,
             offset: const Offset(0, 4),
           ),
@@ -102,7 +102,7 @@ class OrderTrackingScreen extends StatelessWidget {
                   vertical: 6,
                 ),
                 decoration: BoxDecoration(
-                  color: AppColors.primary.withOpacity(0.1),
+                  color: AppColors.primary.withValues(alpha:0.1),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: const Text(
@@ -263,7 +263,7 @@ class OrderTrackingScreen extends StatelessWidget {
                             fontFamily: 'Poppins',
                             fontWeight: FontWeight.w400,
                             fontSize: 12,
-                            color: AppColors.textGrey.withOpacity(0.8),
+                            color: AppColors.textGrey.withValues(alpha:0.8),
                           ),
                         ),
                       ],
@@ -295,7 +295,7 @@ class OrderTrackingScreen extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.04),
+            color: Colors.black.withValues(alpha:0.04),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -342,7 +342,7 @@ class OrderTrackingScreen extends StatelessWidget {
           ),
           Container(
             decoration: BoxDecoration(
-              color: AppColors.primary.withOpacity(0.1),
+              color: AppColors.primary.withValues(alpha:0.1),
               borderRadius: BorderRadius.circular(12),
             ),
             child: IconButton(
@@ -353,7 +353,7 @@ class OrderTrackingScreen extends StatelessWidget {
           const SizedBox(width: 8),
           Container(
             decoration: BoxDecoration(
-              color: AppColors.accent.withOpacity(0.1),
+              color: AppColors.accent.withValues(alpha:0.1),
               borderRadius: BorderRadius.circular(12),
             ),
             child: IconButton(

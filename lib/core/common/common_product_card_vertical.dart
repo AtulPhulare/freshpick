@@ -210,7 +210,7 @@ class CommonProductCardVertical extends StatelessWidget {
                     '\$${price.toStringAsFixed(2)}',
                     style: const TextStyle(
                       fontSize: 17,
-                      fontWeight: FontWeight.w800,
+                      fontWeight: FontWeight.w700,
                       color: AppColors.primary,
                     ),
                   ),

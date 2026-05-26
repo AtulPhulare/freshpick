@@ -108,8 +108,8 @@ class _CommonTextFieldState extends State<CommonTextField> {
             boxShadow: [
               BoxShadow(
                 color: _isFocused
-                    ? AppColors.primary.withOpacity(0.08)
-                    : Colors.black.withOpacity(0.04),
+                    ? AppColors.primary.withValues(alpha:0.08)
+                    : Colors.black.withValues(alpha:0.04),
                 blurRadius: _isFocused ? 20 : 10,
                 offset: const Offset(0, 4),
               ),
@@ -141,7 +141,7 @@ class _CommonTextFieldState extends State<CommonTextField> {
             decoration: InputDecoration(
               hintText: widget.hintText,
               hintStyle: TextStyle(
-                color: AppColors.textGrey.withOpacity(0.6),
+                color: AppColors.textGrey.withValues(alpha:0.6),
                 fontWeight: FontWeight.w400,
               ),
               counterText: "",

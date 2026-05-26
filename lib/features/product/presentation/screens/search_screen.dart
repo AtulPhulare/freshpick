@@ -45,7 +45,7 @@ class _SearchScreenState extends State<SearchScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.fromLTRB(20, 14, 20, 14),
               child: CommonSearchBar(
                 hintText: 'Search for fresh produce...',
                 rightIcon: Icons.close_rounded,

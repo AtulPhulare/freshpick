@@ -120,8 +120,9 @@ class _FilterSheetState extends State<_FilterSheet>
     int c = 0;
     if (_selectedSort != 'Relevance') c++;
     if (!(_selectedCategories.length == 1 &&
-        _selectedCategories.contains('All')))
+        _selectedCategories.contains('All'))) {
       c++;
+    }
     if (_selectedTags.isNotEmpty) c++;
     if (_priceRange != const RangeValues(0, 100)) c++;
     if (_minRating > 0) c++;
@@ -544,15 +545,15 @@ class _FilterSheetState extends State<_FilterSheet>
         child: Row(
           children: [
             // Close / cancel
-             CommonIconButton(
-                  icon: Icons.close,
-                  onTap:  () => Navigator.pop(context),
-                  backgroundColor: AppColors.white,
-                  iconColor: AppColors.primary,
-                  size: 54,
-                  iconSize: 22,
-                  borderRadius: 12,
-             ),
+            CommonIconButton(
+              icon: Icons.close,
+              onTap: () => Navigator.pop(context),
+              backgroundColor: AppColors.white,
+              iconColor: AppColors.primary,
+              size: 54,
+              iconSize: 22,
+              borderRadius: 12,
+            ),
             const SizedBox(width: 12),
             // Apply
             Expanded(
