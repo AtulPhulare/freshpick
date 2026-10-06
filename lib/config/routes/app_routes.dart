@@ -14,6 +14,7 @@ import 'package:freshpick/features/product/presentation/screens/product_listing_
 import 'package:freshpick/features/product/presentation/screens/search_screen.dart';
 import 'package:freshpick/features/user/presentation/screens/onboarding_screen.dart';
 import 'package:freshpick/features/orders/presentation/screens/order_tracking_screen.dart';
+import 'package:freshpick/features/shop/presentation/screens/shop_listing_screen.dart';
 import 'route_transitions.dart';
 
 class AppRoutes {
@@ -32,6 +33,7 @@ class AppRoutes {
   static const String savedAddress = '/saved-address';
   static const String paymentMethods = '/payment-methods';
   static const String orderTracking = '/order-tracking';
+  static const String shopListing = '/shop-listing';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -123,6 +125,11 @@ class AppRoutes {
       case orderTracking:
         return RouteTransition.build(
           const OrderTrackingScreen(),
+          animation: RouteAnimation.slide,
+        );
+      case shopListing:
+        return RouteTransition.build(
+          const ShopListingScreen(),
           animation: RouteAnimation.slide,
         );
 

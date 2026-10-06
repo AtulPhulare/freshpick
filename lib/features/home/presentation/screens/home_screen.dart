@@ -249,9 +249,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           CommonAnimatedSection(
                             index: 0,
-                            child: const CommonSectionHeader(
+                            child: CommonSectionHeader(
                               title: 'Nearby Shops',
                               actionText: 'View all',
+                              onActionTap: () => Navigator.pushNamed(
+                                context,
+                                AppRoutes.shopListing,
+                              ),
                             ),
                           ),
                           const SizedBox(height: 16),
