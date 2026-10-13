@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../../core/common/common_header.dart';
 import '../../../../core/common/common_button.dart';
+import '../widgets/address_form_bottomsheet.dart';
 import '../widgets/address_list_item.dart';
 
 class SavedAddressScreen extends StatefulWidget {
@@ -28,6 +29,28 @@ class _SavedAddressScreenState extends State<SavedAddressScreen> {
     },
   ];
 
+  Future<void> _openAddressForm({int? index}) async {
+    final saved = await showAddressFormBottomSheet(
+      context,
+      address: index != null ? _addresses[index] : null,
+    );
+    if (saved == null || !mounted) return;
+
+    setState(() {
+      // Only one address can be the default.
+      if (saved['isDefault'] == true) {
+        for (final address in _addresses) {
+          address['isDefault'] = false;
+        }
+      }
+      if (index != null) {
+        _addresses[index] = saved;
+      } else {
+        _addresses.add(saved);
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +64,10 @@ class _SavedAddressScreenState extends State<SavedAddressScreen> {
                 itemCount: _addresses.length,
                 itemBuilder: (context, index) {
                   final address = _addresses[index];
-                  return AddressListItem(address: address, onEdit: () {});
+                  return AddressListItem(
+                    address: address,
+                    onEdit: () => _openAddressForm(index: index),
+                  );
                 },
               ),
             ),
@@ -53,9 +79,7 @@ class _SavedAddressScreenState extends State<SavedAddressScreen> {
         child: CommonButton(
           text: 'Add New Address',
           icon: Icons.add_rounded,
-          onPressed: () {
-            // Handle add address
-          },
+          onPressed: () => _openAddressForm(),
         ),
       ),
     );

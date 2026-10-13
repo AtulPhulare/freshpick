@@ -9,12 +9,22 @@ import '../../features/profile/presentation/screens/profile_screen.dart';
 class CommonRootScreen extends StatefulWidget {
   const CommonRootScreen({super.key});
 
+  /// Switches the bottom navigation tab from any screen inside the root.
+  static void switchTab(BuildContext context, int index) {
+    context.findAncestorStateOfType<_CommonRootScreenState>()?._onTabTap(index);
+  }
+
   @override
   State<CommonRootScreen> createState() => _CommonRootScreenState();
 }
 
 class _CommonRootScreenState extends State<CommonRootScreen> {
   int _currentIndex = NavIndex.home;
+
+  void _onTabTap(int index) {
+    if (index == _currentIndex) return;
+    setState(() => _currentIndex = index);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,10 +40,7 @@ class _CommonRootScreenState extends State<CommonRootScreen> {
       ),
       bottomNavigationBar: CommonBottomNavigator(
         currentIndex: _currentIndex,
-        onTap: (index) {
-          if (index == _currentIndex) return;
-          setState(() => _currentIndex = index);
-        },
+        onTap: _onTabTap,
       ),
     );
   }

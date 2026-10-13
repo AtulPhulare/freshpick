@@ -4,6 +4,7 @@ import '../../../../config/routes/app_routes.dart';
 import '../../../../core/common/common_animated_section.dart';
 import '../../../../core/common/common_section_header.dart';
 import '../../../../core/constants/app_colors.dart';
+import '../widgets/logout_bottomsheet.dart';
 import '../widgets/profile_info_card.dart';
 import '../widgets/settings_widgets.dart';
 
@@ -145,7 +146,17 @@ class ProfileScreen extends StatelessWidget {
                       index: 3,
                       child: CommonButton(
                         text: 'Log Out',
-                        onPressed: () {},
+                        onPressed: () async {
+                          final confirmed = await showLogoutBottomSheet(
+                            context,
+                          );
+                          if (confirmed != true || !context.mounted) return;
+                          Navigator.pushNamedAndRemoveUntil(
+                            context,
+                            AppRoutes.phoneLogin,
+                            (route) => false,
+                          );
+                        },
                         icon: Icons.logout_rounded,
                         textColor: AppColors.white,
                         backgroundColor: AppColors.error,

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:freshpick/core/common/common_chip.dart';
+import 'package:freshpick/core/common/common_navigator.dart';
 import 'package:freshpick/core/common/common_product_card_vertical.dart';
+import 'package:freshpick/core/common/common_root_screen.dart';
 import 'package:freshpick/core/constants/app_colors.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import '../../../../core/common/common_animated_section.dart';
@@ -238,7 +240,7 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           Column(
             children: [
-              SizedBox(height: 400),
+              SizedBox(height: 380),
               Expanded(
                 child: ClipRect(
                   child: SingleChildScrollView(
@@ -249,9 +251,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           CommonAnimatedSection(
                             index: 0,
-                            child: const CommonSectionHeader(
+                            child: CommonSectionHeader(
                               title: 'Nearby Shops',
                               actionText: 'View all',
+                              onActionTap: () => Navigator.pushNamed(
+                                context,
+                                AppRoutes.shopListing,
+                              ),
                             ),
                           ),
                           const SizedBox(height: 16),
@@ -309,9 +315,13 @@ class _HomeScreenState extends State<HomeScreen> {
                             index: 1,
                             child: Column(
                               children: [
-                                const CommonSectionHeader(
+                                CommonSectionHeader(
                                   title: 'You might need',
                                   actionText: 'See more',
+                                  onActionTap: () => CommonRootScreen.switchTab(
+                                    context,
+                                    NavIndex.list,
+                                  ),
                                 ),
                                 const SizedBox(height: 16),
                                 SizedBox(

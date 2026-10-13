@@ -74,4 +74,98 @@ class DummyData {
     {'name': 'Meat', 'image': 'assets/images/meat.png'},
     {'name': 'Milk/Juice', 'image': 'assets/images/milk.png'},
   ];
+
+  static const List<Map<String, dynamic>> shops = [
+    {
+      'name': 'Fresh Produce Market',
+      'type': 'Grocery',
+      'imageUrl':
+          'https://images.unsplash.com/photo-1542838132-92c53300491e?w=400&q=80',
+      'address': 'Connaught Place, New Delhi',
+      'rating': 4.7,
+      'reviewCount': 312,
+      'distance': 0.8,
+      'deliveryTime': '15-20 min',
+      'isOpen': true,
+      'freeDelivery': true,
+    },
+    {
+      'name': 'Green Valley Store',
+      'type': 'Organic',
+      'imageUrl':
+          'https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=400&q=80',
+      'address': 'Janpath Road, New Delhi',
+      'rating': 4.8,
+      'reviewCount': 204,
+      'distance': 1.2,
+      'deliveryTime': '20-25 min',
+      'isOpen': true,
+      'freeDelivery': false,
+    },
+    {
+      'name': 'Daily Needs Shop',
+      'type': 'Grocery',
+      'imageUrl':
+          'https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=400&q=80',
+      'address': 'Barakhamba Road, New Delhi',
+      'rating': 4.3,
+      'reviewCount': 98,
+      'distance': 1.5,
+      'deliveryTime': '20-30 min',
+      'isOpen': false,
+      'freeDelivery': true,
+    },
+    {
+      'name': 'Farm Fresh Corner',
+      'type': 'Vegetables',
+      'imageUrl':
+          'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&q=80',
+      'address': 'Gole Market, New Delhi',
+      'rating': 4.6,
+      'reviewCount': 176,
+      'distance': 0.6,
+      'deliveryTime': '10-15 min',
+      'isOpen': true,
+      'freeDelivery': true,
+    },
+    {
+      'name': 'Wholesale Hub',
+      'type': 'Wholesale',
+      'imageUrl':
+          'https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=400&q=80',
+      'address': 'Paharganj, New Delhi',
+      'rating': 4.2,
+      'reviewCount': 64,
+      'distance': 2.4,
+      'deliveryTime': '30-40 min',
+      'isOpen': true,
+      'freeDelivery': false,
+    },
+    {
+      'name': 'Quick Mart',
+      'type': 'Convenience',
+      'imageUrl':
+          'https://images.unsplash.com/photo-1601599561213-832382fd07ba?w=400&q=80',
+      'address': 'Mandi House, New Delhi',
+      'rating': 4.4,
+      'reviewCount': 141,
+      'distance': 1.0,
+      'deliveryTime': '10-20 min',
+      'isOpen': true,
+      'freeDelivery': true,
+    },
+    {
+      'name': 'Local Bazaar',
+      'type': 'Market',
+      'imageUrl':
+          'https://images.unsplash.com/photo-1533900298318-6b8da08a523e?w=400&q=80',
+      'address': 'Karol Bagh, New Delhi',
+      'rating': 4.5,
+      'reviewCount': 233,
+      'distance': 3.1,
+      'deliveryTime': '35-45 min',
+      'isOpen': false,
+      'freeDelivery': false,
+    },
+  ];
 }

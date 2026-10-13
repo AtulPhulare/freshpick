@@ -88,7 +88,7 @@ class AddressListItem extends StatelessWidget {
                       CommonIconButton(
                         icon: Icons.edit_note_rounded,
                         onTap: onEdit,
-                        iconColor: AppColors.textGrey,
+                        iconColor: AppColors.white,
                         size: 32,
                         iconSize: 18,
                       ),

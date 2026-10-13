@@ -21,7 +21,8 @@ class WishlistGrid extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(16, 4, 16, 100),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        childAspectRatio: 0.65,
+        // Fixed height so the card content fits on every screen width
+        mainAxisExtent: 290,
         crossAxisSpacing: 14,
         mainAxisSpacing: 14,
       ),
